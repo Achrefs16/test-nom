@@ -1,0 +1,12 @@
+ <div class="accordion-item " >
+    <h2 class="accordion-header" id="heading-{{post?._id}}">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-'+post?._id"  aria-expanded="true" [attr.aria-controls]="'collapseOne-'+post?._id">
+       {{post?.titre}}
+      </button>
+    </h2>
+    <div id="collapse-{{post?._id}}"  class="accordion-collapse collapse " [attr.aria-labelledby]="'headingOne-'+post?._id" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       {{post?.contenu}}
+      </div>
+    </div>
+  </div>
