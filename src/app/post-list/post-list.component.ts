@@ -13,6 +13,9 @@ export class PostListComponent {
   constructor(private postservice:PostsService){}
  posts:Post[]=[]
 ngOnInit(): void {
-    this.posts=this.postservice.Posts;
+   // this.posts=this.postservice.Posts;
+   this.postservice.getpost().subscribe((data)=>{
+    this.posts=data
+   })
 }
 }

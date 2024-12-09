@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
+import { HttpClient, HttpClientJsonpModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AuthentificationComponent } from './authentification/authentification.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
